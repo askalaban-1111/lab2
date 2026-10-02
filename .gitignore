@@ -1,2 +1,5 @@
-# Исключенные пути проекта
 /cmake-build-debug/
+*_bin
+/lab2
+.idea/
+*.exe
