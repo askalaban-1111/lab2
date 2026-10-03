@@ -79,7 +79,7 @@ int main() {
         basic_cost += 80;
     }
 
-    cout << "Итоговая стоимость: " << basic_cost;
+    cout << "Итоговая стоимость: " << basic_cost << "$";
 
     return 0;
 }
