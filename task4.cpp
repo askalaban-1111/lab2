@@ -1,13 +1,15 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main() {
     char category;
-    int exp, age, accidents, cover;
+    int exp, age, accidents;
+    string cover;
 
 
-    cout << "Введите категорию (A, B, C): ";
+    cout << "Введите категорию латиницей (A, B, C): ";
     cin >> category;
 
     category = toupper(category);
@@ -35,15 +37,18 @@ int main() {
     cin >> accidents;
 
     if (accidents < 0) {
-        cout << "Количесвто страховых случаев введены неверно!";
+        cout << "Количество страховых случаев введены неверно!";
     }
 
-    cout << "Есть ли у вас расширенное покрытие (Да - 1/Нет - 2): ";
+    cout << "Есть ли у вас расширенное покрытие (Да/Нет): ";
     cin >> cover;
 
-    if (!(cover == 1 || cover == 2)) {
-        cout << "Значения введены неверно";
-        return 1;
+
+    if (cover == "ДА" || cover == "да" || cover == "Да" || cover == "дА" || cover == "lf") {
+        cover = "ДА";
+    } else if (cover == "Нет" || cover == "НЕт" || cover == "НЕТ" ||
+        cover == "нЕТ" || cover == "неТ" || cover == "ytn") {
+        cover = "НЕТ";
     }
 
     double basic_cost;
@@ -70,7 +75,7 @@ int main() {
         basic_cost *= 0.9;
     }
 
-    if (cover == 1) {
+    if (cover == "ДА") {
         basic_cost += 80;
     }
 
