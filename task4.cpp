@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
+#include <clocale>
 
 using namespace std;
 
 int main() {
+    setlocale (LC_ALL, "Russian");
+
     char category;
     int exp, age, accidents;
     string cover;

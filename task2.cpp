@@ -1,8 +1,11 @@
 #include <iostream>
+#include <clocale>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "Russian");
+
     double basic_cost = 300;
     int accidents;
     int exp;
